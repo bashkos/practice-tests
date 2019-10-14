@@ -76,7 +76,7 @@ solarSystem.add({
 })
 
 function getMoons(solarSystem, targetPlanetName) {
-  const { moons } = Array.from(solarSystem.entries()).find(({ planet }) => {
+  const { moons } = solarSystem.entries().find(({ planet }) => {
     const [ name ] = planet
     return name === targetPlanetName
   })
